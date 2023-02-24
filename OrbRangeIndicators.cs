@@ -2,41 +2,64 @@
 using System.Reflection;
 using Modding;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using USceneManager = UnityEngine.SceneManagement.SceneManager;
 
 public class OrbRangeIndicators : Mod, ITogglableMod {
     public static OrbRangeIndicators instance;
-    private static bool assigned = false;
+    private GameObject absRad = null;
 
     public OrbRangeIndicators() : base("Orb Range Indicators") { }
 
     public override void Initialize() {
-        instance = this;
-
         Log("Initalizing.");
-        ModHooks.HeroUpdateHook += FindRadiance;
-    }
 
+        instance = this;
+        USceneManager.activeSceneChanged += InitiateRadiancePolling;
+        if (USceneManager.GetActiveScene().name == "GG_Radiance") {
+            ModHooks.HeroUpdateHook += FindRadiance;
+        }
+
+        Log("Initialized");
+    }
 
     public override string GetVersion(){
         return FileVersionInfo.GetVersionInfo(Assembly.GetAssembly(typeof(OrbRangeIndicators)).Location).FileVersion;
     }
 
-    private static void FindRadiance() {
+    private void InitiateRadiancePolling(Scene _, Scene to) {
+        if (to.name == "GG_Radiance") {
+            ModHooks.HeroUpdateHook += FindRadiance;
+        } else {
+            if (absRad != null) {
+                Indicators indicators = absRad.GetComponent<Indicators>();
+                if (indicators != null) {
+                    indicators.Unload();
+                    GameObject.DestroyImmediate(indicators);
+                }
+            }
+            this.absRad = null;
+        }
+    }
+
+    private void FindRadiance() {
         GameObject absRad = GameObject.Find("Absolute Radiance");
-        if (!assigned && absRad != null) {
+        if (absRad != null) {
             absRad.AddComponent<Indicators>();
-            assigned = true;
+            this.absRad = absRad;
+            ModHooks.HeroUpdateHook -= FindRadiance;
         }
     }
 
     public void Unload() {
-        ModHooks.HeroUpdateHook -= FindRadiance;
-        GameObject absRad = GameObject.Find("Absolute Radiance");
-        Indicators indicators = (instance != null ? absRad != null ? absRad.GetComponent<Indicators>() : null : null);
-        if (!(indicators == null))
-        {
-            Object.Destroy(indicators);
+        if (absRad != null) {
+            Indicators indicators = absRad.GetComponent<Indicators>();
+            if (indicators != null) {
+                indicators.Unload();
+                GameObject.DestroyImmediate(indicators);
+            }
         }
-        assigned = false;
+        ModHooks.HeroUpdateHook -= FindRadiance;
+        USceneManager.activeSceneChanged -= InitiateRadiancePolling;
     }
 }

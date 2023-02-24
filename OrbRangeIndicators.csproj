@@ -15,8 +15,8 @@
     <Product>OrbRangeIndicators</Product>
     <Description>A Hollow Knight Mod</Description>
     <Copyright>Copyright © 2023</Copyright>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>1.0.0.0</FileVersion>
+    <AssemblyVersion>1.0.1</AssemblyVersion>
+    <FileVersion>1.0.1</FileVersion>
     <OutputPath>bin\$(Configuration)\</OutputPath>
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
@@ -112,17 +112,11 @@
     <Reference Include="System.Runtime.Serialization.Xml">
       <HintPath>$(HollowKnightRefs)/System.Runtime.Serialization.Xml.dll</HintPath>
     </Reference>
-    <Reference Include="System.ServiceModel.Internals">
-      <HintPath>$(HollowKnightRefs)/System.ServiceModel.Internals.dll</HintPath>
-    </Reference>
     <Reference Include="System.Transactions">
       <HintPath>$(HollowKnightRefs)/System.Transactions.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.XPath.XDocument">
       <HintPath>$(HollowKnightRefs)/System.Xml.XPath.XDocument.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Timeline">
-      <HintPath>$(HollowKnightRefs)/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine">
       <HintPath>$(HollowKnightRefs)/UnityEngine.dll</HintPath>
@@ -132,9 +126,6 @@
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>$(HollowKnightRefs)/UnityEngine.AIModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.AndroidJNIModule">
-      <HintPath>$(HollowKnightRefs)/UnityEngine.AndroidJNIModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AnimationModule">
       <HintPath>$(HollowKnightRefs)/UnityEngine.AnimationModule.dll</HintPath>
@@ -163,20 +154,11 @@
     <Reference Include="UnityEngine.DirectorModule">
       <HintPath>$(HollowKnightRefs)/UnityEngine.DirectorModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.DSPGraphModule">
-      <HintPath>$(HollowKnightRefs)/UnityEngine.DSPGraphModule.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.GameCenterModule">
       <HintPath>$(HollowKnightRefs)/UnityEngine.GameCenterModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.GIModule">
-      <HintPath>$(HollowKnightRefs)/UnityEngine.GIModule.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.GridModule">
       <HintPath>$(HollowKnightRefs)/UnityEngine.GridModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.HotReloadModule">
-      <HintPath>$(HollowKnightRefs)/UnityEngine.HotReloadModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ImageConversionModule">
       <HintPath>$(HollowKnightRefs)/UnityEngine.ImageConversionModule.dll</HintPath>
@@ -184,17 +166,11 @@
     <Reference Include="UnityEngine.IMGUIModule">
       <HintPath>$(HollowKnightRefs)/UnityEngine.IMGUIModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.InputLegacyModule">
-      <HintPath>$(HollowKnightRefs)/UnityEngine.InputLegacyModule.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.InputModule">
       <HintPath>$(HollowKnightRefs)/UnityEngine.InputModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.JSONSerializeModule">
       <HintPath>$(HollowKnightRefs)/UnityEngine.JSONSerializeModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.LocalizationModule">
-      <HintPath>$(HollowKnightRefs)/UnityEngine.LocalizationModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.ParticleSystemModule">
       <HintPath>$(HollowKnightRefs)/UnityEngine.ParticleSystemModule.dll</HintPath>
@@ -208,12 +184,6 @@
     <Reference Include="UnityEngine.PhysicsModule">
       <HintPath>$(HollowKnightRefs)/UnityEngine.PhysicsModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.ProfilerModule">
-      <HintPath>$(HollowKnightRefs)/UnityEngine.ProfilerModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule">
-      <HintPath>$(HollowKnightRefs)/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.ScreenCaptureModule">
       <HintPath>$(HollowKnightRefs)/UnityEngine.ScreenCaptureModule.dll</HintPath>
     </Reference>
@@ -226,23 +196,11 @@
     <Reference Include="UnityEngine.SpriteShapeModule">
       <HintPath>$(HollowKnightRefs)/UnityEngine.SpriteShapeModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.StreamingModule">
-      <HintPath>$(HollowKnightRefs)/UnityEngine.StreamingModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.SubstanceModule">
-      <HintPath>$(HollowKnightRefs)/UnityEngine.SubstanceModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.SubsystemsModule">
-      <HintPath>$(HollowKnightRefs)/UnityEngine.SubsystemsModule.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.TerrainModule">
       <HintPath>$(HollowKnightRefs)/UnityEngine.TerrainModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TerrainPhysicsModule">
       <HintPath>$(HollowKnightRefs)/UnityEngine.TerrainPhysicsModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.TextCoreModule">
-      <HintPath>$(HollowKnightRefs)/UnityEngine.TextCoreModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TextRenderingModule">
       <HintPath>$(HollowKnightRefs)/UnityEngine.TextRenderingModule.dll</HintPath>
@@ -250,23 +208,14 @@
     <Reference Include="UnityEngine.TilemapModule">
       <HintPath>$(HollowKnightRefs)/UnityEngine.TilemapModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.TLSModule">
-      <HintPath>$(HollowKnightRefs)/UnityEngine.TLSModule.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>$(HollowKnightRefs)/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UIElementsModule">
       <HintPath>$(HollowKnightRefs)/UnityEngine.UIElementsModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.UIElementsNativeModule">
-      <HintPath>$(HollowKnightRefs)/UnityEngine.UIElementsNativeModule.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.UIModule">
       <HintPath>$(HollowKnightRefs)/UnityEngine.UIModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UmbraModule">
-      <HintPath>$(HollowKnightRefs)/UnityEngine.UmbraModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UNETModule">
       <HintPath>$(HollowKnightRefs)/UnityEngine.UNETModule.dll</HintPath>
@@ -276,15 +225,6 @@
     </Reference>
     <Reference Include="UnityEngine.UnityConnectModule">
       <HintPath>$(HollowKnightRefs)/UnityEngine.UnityConnectModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UnityCurlModule">
-      <HintPath>$(HollowKnightRefs)/UnityEngine.UnityCurlModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UnityTestProtocolModule">
-      <HintPath>$(HollowKnightRefs)/UnityEngine.UnityTestProtocolModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.UnityWebRequestAssetBundleModule">
-      <HintPath>$(HollowKnightRefs)/UnityEngine.UnityWebRequestAssetBundleModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UnityWebRequestAudioModule">
       <HintPath>$(HollowKnightRefs)/UnityEngine.UnityWebRequestAudioModule.dll</HintPath>
@@ -301,23 +241,14 @@
     <Reference Include="UnityEngine.VehiclesModule">
       <HintPath>$(HollowKnightRefs)/UnityEngine.VehiclesModule.dll</HintPath>
     </Reference>
-    <Reference Include="UnityEngine.VFXModule">
-      <HintPath>$(HollowKnightRefs)/UnityEngine.VFXModule.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEngine.VideoModule">
       <HintPath>$(HollowKnightRefs)/UnityEngine.VideoModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.VirtualTexturingModule">
-      <HintPath>$(HollowKnightRefs)/UnityEngine.VirtualTexturingModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.VRModule">
       <HintPath>$(HollowKnightRefs)/UnityEngine.VRModule.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.WindModule">
       <HintPath>$(HollowKnightRefs)/UnityEngine.WindModule.dll</HintPath>
-    </Reference>
-    <Reference Include="UnityEngine.XRModule">
-      <HintPath>$(HollowKnightRefs)/UnityEngine.XRModule.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>

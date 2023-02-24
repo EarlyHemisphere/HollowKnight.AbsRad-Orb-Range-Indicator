@@ -1,8 +1,6 @@
 using UnityEngine;
 using SFCore.Utils;
-using HutongGames.PlayMaker;
 using HutongGames.PlayMaker.Actions;
-using Modding;
 
 internal class Indicators : MonoBehaviour {
     private PlayMakerFSM attackCommands;
@@ -89,5 +87,14 @@ internal class Indicators : MonoBehaviour {
             float y = radius * Mathf.Sin(theta);
             renderer.SetPosition(i, new Vector3(base.gameObject.transform.GetPositionX() + x, base.gameObject.transform.GetPositionY() + y));
         }
+    }
+
+    public void Unload() {
+        GameObject.DestroyImmediate(leftBoundRenderer);
+        GameObject.DestroyImmediate(rightBoundRenderer);
+        GameObject.DestroyImmediate(upperBoundRenderer);
+        GameObject.DestroyImmediate(lowerBoundRenderer);
+        GameObject.DestroyImmediate(innerBoundRenderer);
+        GameObject.DestroyImmediate(outerBoundRenderer);
     }
 }
